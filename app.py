@@ -96,7 +96,7 @@ Judges may apply economic reasoning in various ways, including:
 - Referring to economic models or ideas (e.g., market failure, externalities, monopolistic behaviour)
 - Balancing competing interests such as consumer welfare and financial stability
 
-Note: Economic reasoning need not involve formal economic models or technical language. It
+Note: Economic reasoning may, but does not need to, involve formal economic models or technical language. It
 includes broader economic intuition and reasoning about how laws affect behaviour, incentives,
 and outcomes of economic actors.
 """
@@ -374,8 +374,8 @@ elif st.session_state.stage == "questions":
 
         st.markdown("---")
         # Q2
-        st.markdown("**Q2.** On a scale from 1 (poor) to 10 (excellent), how would you rate "
-                    "the knowledge of economics (understanding of economic concepts) of this judge?")
+        st.markdown("**Q2.** Please rate the knowledge of economics (understanding of economic "
+                    "concepts) by this judge on a scale from 1 (poor) to 10 (excellent).")
         q2 = st.select_slider("Q2", options=list(range(1, 11)),
                                value=prev_numeric(2) or 5, key=f"q2_{judge}",
                                label_visibility="collapsed")
@@ -383,8 +383,8 @@ elif st.session_state.stage == "questions":
 
         st.markdown("---")
         # Q3
-        st.markdown("**Q3.** On a scale from 1 (no use) to 10 (extensive use), to what extent "
-                    "does this judge use economic reasoning to support their decision-making?")
+        st.markdown("**Q3.** Please indicate to what extent this judge uses economic "
+                    "reasoning to support their decision-making on a scale from 1 (no use) to 10 (extensive use).")
         q3 = st.select_slider("Q3", options=list(range(1, 11)),
                                value=prev_numeric(3) or 5, key=f"q3_{judge}",
                                label_visibility="collapsed")
@@ -405,9 +405,9 @@ elif st.session_state.stage == "questions":
 
         st.markdown("---")
         # Q5
-        st.markdown("**Q5.** On a scale from 1 (never acknowledges them) through 5 (neutral) "
-                    "to 10 (consistently engages with and relies on them), to what extent does "
-                    "this judge respond positively to parties' arguments based on economic reasoning?")
+        st.markdown("**Q5.** Please indicate to what extent this judge responds to parties' "
+                    "arguments based on economic reasoning on a scale from 1 (rejects them) "
+                    "through 5 (neutral) to 10 (consistently engages with and relies on them).")
         q5 = st.select_slider("Q5", options=list(range(1, 11)),
                                value=prev_numeric(5) or 5, key=f"q5_{judge}",
                                label_visibility="collapsed")
@@ -415,10 +415,10 @@ elif st.session_state.stage == "questions":
 
         st.markdown("---")
         # Q6
-        st.markdown("**Q6.** On a scale from 1 to 10, do you think this judge would consider "
-                    "that market regulators and supervisors contribute in a very negative (1), "
-                    "neutral (5), or a very positive (10) way to the stability and efficiency "
-                    "of the EU economy?")
+        st.markdown("**Q6.** Please provide your view on how this judge evaluates the contribution "
+                    "of market regulators and supervisors to the stability and efficiency of the EU "
+                    "economy on a scale from 1 (very negative contribution) through 5 (neutral contribution) "
+                    "to 10 (very positive contribution).")
         q6 = st.select_slider("Q6", options=list(range(1, 11)),
                                value=prev_numeric(6) or 5, key=f"q6_{judge}",
                                label_visibility="collapsed")
@@ -426,10 +426,11 @@ elif st.session_state.stage == "questions":
 
         st.markdown("---")
         # Q7
-        st.markdown("**Q7.** On a scale from 1 (very critical about further EU integration) "
-                    "to 10 (very positive about further EU integration), what are this judge's "
-                    "views about EU integration understood as allocation of competences between "
-                    "Member States and EU bodies?")
+        st.markdown("**Q7.** Please indicate what are this judge's views about EU integration "
+                    "understood as allocation of competences between Member States and EU bodies "
+                    "on a scale from 1 (very critical about further EU integration / powers should "
+                    "rest with the Member States) to 10 (very positive about further EU integration "
+                    "/ more powers should be given to EU institutions).")
         q7 = st.select_slider("Q7", options=list(range(1, 11)),
                                value=prev_numeric(7) or 5, key=f"q7_{judge}",
                                label_visibility="collapsed")
@@ -439,8 +440,8 @@ elif st.session_state.stage == "questions":
         # Q8
         st.markdown("**Q8.** *\"Just because some rules (laws, regulations) are good for "
                     "business does not mean they are necessarily good for fostering competitive "
-                    "markets.\"* On a scale from 1 (strongly disagree) to 10 (strongly agree), "
-                    "would this judge agree with the above statement?")
+                    "markets.\"* Please provide your view on whether this judge would agree with "
+                    "the above statement on a scale from 1 (strongly disagree) to 10 (strongly agree).")
         q8 = st.select_slider("Q8", options=list(range(1, 11)),
                                value=prev_numeric(8) or 5, key=f"q8_{judge}",
                                label_visibility="collapsed")
@@ -448,10 +449,10 @@ elif st.session_state.stage == "questions":
 
         st.markdown("---")
         # Q9
-        st.markdown("**Q9.** *\"Regulations (laws) are necessary for the stability and "
-                    "efficient functioning of the economy.\"* On a scale from 1 (strongly "
-                    "disagree) to 10 (strongly agree), would this judge agree with the above "
-                    "statement?")
+        st.markdown("**Q9.** *\"Regulations (laws) are necessary for the stability and efficient "
+                    "functioning of the economy.\"* Please provide your view on whether this judge "
+                    "would agree with the above statement on a scale from 1 (strongly disagree) "
+                    "to 10 (strongly agree).")
         q9 = st.select_slider("Q9", options=list(range(1, 11)),
                                value=prev_numeric(9) or 5, key=f"q9_{judge}",
                                label_visibility="collapsed")
@@ -461,9 +462,9 @@ elif st.session_state.stage == "questions":
         # Q10
         st.markdown("**Q10.** *\"The economy is mostly self-stabilising and government "
                     "intervention is rarely required as the markets reach efficient outcomes "
-                    "on their own and the economy tends towards equilibrium.\"* On a scale "
-                    "from 1 (strongly disagree) to 10 (strongly agree), would this judge "
-                    "agree with the above statement?")
+                    "on their own and the economy tends towards equilibrium.\"* Please provide "
+                    "your view on whether this judge would agree with the above statement on a "
+                    "scale from 1 (strongly disagree) to 10 (strongly agree).")
         q10 = st.select_slider("Q10", options=list(range(1, 11)),
                                 value=prev_numeric(10) or 5, key=f"q10_{judge}",
                                 label_visibility="collapsed")
@@ -485,8 +486,8 @@ elif st.session_state.stage == "questions":
 
         st.markdown("---")
         # Q12
-        st.markdown("**Q12.** On a scale from 1 (not confident) to 10 (very confident), "
-                    "how confident are you about the information you have provided on this judge?")
+        st.markdown("**Q12.** Please indicate how confident you are about the information you have "
+                    "provided on this judge on a scale from 1 (not confident at all) to 10 (very confident).")
         q12 = st.select_slider("Q12", options=list(range(1, 11)),
                                 value=prev_numeric(12) or 5, key=f"q12_{judge}",
                                 label_visibility="collapsed")
